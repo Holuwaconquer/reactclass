@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+  overflow-x: hidden;
+}
+.logo{
+  font-weight: 900;
+}
+.navbar{
+  width: 100%;
+  padding: 10px 5%;
+  display: flex;
+  justify-content: space-between;
+
+  div{
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+
+    ul{
+      list-style: none;
+      display: flex;
+      gap: 1.5em;
+    }
+  }
+}
+.activeLink{
+  font-size: 2em;
+}

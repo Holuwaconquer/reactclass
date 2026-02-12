@@ -1,0 +1,4 @@
+INTERPOLATION
+
+<div>{ name }</div>
+JSX - JAVASCRIPT XML
