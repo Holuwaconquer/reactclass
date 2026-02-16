@@ -1,0 +1,10 @@
+{
+  "posts": [
+    {
+      "id": "f438",
+      "title": "This is a new post title",
+      "body": "This is a new post title",
+      "userId": "2"
+    }
+  ]
+}

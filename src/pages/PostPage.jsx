@@ -7,7 +7,7 @@ const PostPage = () => {
   const [isFetching, setIsFetching] = useState(false);
   const [isError, setisError] = useState(false);
   const navigate = useNavigate();
-  const apiUrl = "https://jsonplaceholder.typicode.com/posts";
+  const apiUrl = "http://localhost:3001/posts";
 
   const getAllPost = () => {
     setIsFetching(true);
@@ -72,13 +72,13 @@ const PostPage = () => {
             <div className="leading-loose">
               <h1>userId:{data.userId}</h1>
               <p>Title: {data.title.split(" ").splice(0, 4).join(" ")} </p>
-              <p>body: {data.body.split(" ").splice(0, 4).join(" ")} </p>
+              <p>body: {data.body.split(" ").splice(0, 6).join(" ")} </p>
             </div>{" "}
           </div>
         ))}
         
       </div>
-      //{" "}
+      {" "}
     </div>
   );
 };
