@@ -255,6 +255,7 @@ import PostdetailsPage from './pages/PostdetailsPage'
 import CreatePost from './pages/CreatePost'
 import UpdatePost from './pages/UpdatePost'
 import EditPost from './pages/EditPost'
+import Signup from './pages/Signup'
 
 const App = () => {
   return (
@@ -266,9 +267,17 @@ const App = () => {
         <Route path='/create-post' element={<CreatePost />} />
         <Route path='/edit-post/:id' element={<EditPost />} />
         <Route path='/update-post' element={<UpdatePost />} />
+
+        <Route path='/signup' element={<Signup />} />
       </Routes>
     </BrowserRouter>
   )
 }
 
 export default App
+
+
+// FORMIK - form validation, errors handling, submission
+// YUP - schema-based rule (blueprint)
+// regex - regular expression - @email.com
+

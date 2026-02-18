@@ -6,5 +6,24 @@
       "body": "This is a new post title",
       "userId": "2"
     }
-  ]
+  ],
+  "Users": [
+    {
+      "id": "9785",
+      "firstname": "okikiola",
+      "lastname": "fakorede",
+      "phoneNumber": "+2349025140981",
+      "email": "holuwaconquer488@gmail.com",
+      "password": "okikiola"
+    },
+    {
+      "id": "3037",
+      "firstname": "Samuel",
+      "lastname": "ayegbe",
+      "phoneNumber": "+234902514098",
+      "email": "holuwaconquer@gmail.com",
+      "password": "okikiola"
+    }
+  ],
+  "Staff": []
 }
