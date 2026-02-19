@@ -236,7 +236,7 @@
 // delete post page
 
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router";
+import { Route, Routes } from "react-router";
 import PostPage from "./pages/PostPage";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
@@ -248,10 +248,20 @@ import EditPost from "./pages/EditPost";
 import Signup from "./pages/Signup";
 import StudentTable from "./pages/StudentTable";
 import EditStudent from "./pages/EditStudent";
+import ProductPage from "./pages/ProductPage";
 
 const App = () => {
+
+  let text = "hello world";
+  let textTest = text.match(/hello/);
+  console.log(textTest);
+
+  const email = "myemailgmail.com";
+  const emailTest = email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/);
+  console.log("This is a valid email:", emailTest);
+
   return (
-    <BrowserRouter>
+    <>
       <Navbar />
       <Routes>
         <Route path="/" element={<PostPage />} />
@@ -259,12 +269,12 @@ const App = () => {
         <Route path="/create-post" element={<CreatePost />} />
         <Route path="/edit-post/:id" element={<EditPost />} />
         <Route path="/update-post" element={<UpdatePost />} />
-
+        <Route path="/products" element={<ProductPage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/StudentTable" element={<StudentTable />} />
         <Route path="/edit/:id" element={<EditStudent />} />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 };
 
@@ -273,3 +283,11 @@ export default App;
 // FORMIK - form validation, errors handling, submission
 // YUP - schema-based rule (blueprint)
 // regex - regular expression - @email.com
+// they are patterns used to match character combinations in strings in javasript?
+
+
+// global component - state
+
+// <global>
+//   <App></App>
+// </global>

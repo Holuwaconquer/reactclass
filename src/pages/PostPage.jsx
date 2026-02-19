@@ -1,7 +1,8 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import StudentTable from "./StudentTable";
+import { GlobalContext } from "../GlobalContext";
 
 const PostPage = () => {
   const [postData, setpostData] = useState([]);
@@ -10,7 +11,12 @@ const PostPage = () => {
   const navigate = useNavigate();
   const apiUrl = "http://localhost:3001/posts";
 
+  const { user } = useContext(GlobalContext)
+  console.log(user)
+  // console.log(age)
+
   const getAllPost = () => {
+
     setIsFetching(true);
 
     axios
@@ -38,7 +44,8 @@ const PostPage = () => {
     <div className="w-full flex flex-col gap-4 !px-8">
       {/* for the header and the create button */}
       <div className="w-full flex items-center justify-between">
-        <h1 className="text-3xl font-bold">All Posts</h1>
+        <h1 className="text-3xl font-bold">All Posts</h1> 
+        {user}
         <button
           onClick={() => navigate("/create-post")}
           className="bg-white text-center w-48 rounded-2xl h-14 relative text-black text-xl font-semibold group"

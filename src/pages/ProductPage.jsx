@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router'
+import { CartContext } from '../CartContext'
 
 const ProductPage = () => {
     
@@ -11,6 +12,7 @@ const ProductPage = () => {
 
     const [allContent, setallContent] = useState(5)
 
+    const { cart, addToCart, total } = useContext(CartContext)
     
     useEffect(() => {
         fetch('https://dummyjson.com/products')
@@ -31,10 +33,11 @@ const ProductPage = () => {
     
   return (
     <div className=''>
-        <h1>All Products</h1>
+        <h1>All Products</h1> {cart.length > 0 && <p>cart: {cart.length}</p>} 
+        {total > 0 && <p>Total: N{total.toLocaleString()}</p>}
         <div className='w-full grid md:grid-cols-2 lg:grid-cols-4 gap-4'>
             {products.length > 0 ? products.map(product => (
-                <div onClick={() => navigate(`/products/${product.id}`, {state: {product}}) } key={product.id} className='w-full h-[250] rounded-[10px] bg-white'>
+                <div onClick={() => addToCart(product)} key={product.id} className='w-full h-[250] rounded-[10px] bg-white'>
                     <div className='w-full h-[150px] object-cover'>
                         <img src={product.thumbnail} className='w-full h-full object-cover' alt={product.name} />
                     </div>
