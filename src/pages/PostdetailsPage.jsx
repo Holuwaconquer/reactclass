@@ -25,7 +25,7 @@ const PostdetailsPage = () => {
   }
 
   return (
-    <div className="px-9! flex flex-col justify-evenly box-border w-3/4 border h-80 mx-auto! rounded-md bg-red-200 ">
+    <div className="px-9! flex flex-col justify-evenly box-border w-3/4 border h-80 mx-auto! rounded-md bg-white shadow-2xl font-semibold ">
       <h1>userId:{data?.userId}</h1>
       <p>Title: {data?.title.split(" ").splice(0, 10).join(" ")} </p>
       <p>body: {data?.body.split(" ").splice(0, 10).join(" ")} </p>

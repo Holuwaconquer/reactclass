@@ -1,28 +1,42 @@
 {
   "posts": [
     {
-      "id": "f438",
-      "title": "This is a new post title",
-      "body": "This is a new post title",
-      "userId": "2"
+      "id": "8e9d",
+      "title": "title 1",
+      "body": "bodyyyyyyyyyyy",
+      "userId": "5"
     }
   ],
   "Users": [
     {
-      "id": "9785",
-      "firstname": "okikiola",
-      "lastname": "fakorede",
-      "phoneNumber": "+2349025140981",
-      "email": "holuwaconquer488@gmail.com",
-      "password": "okikiola"
+      "id": "0164",
+      "firstname": "John",
+      "lastname": "Doe",
+      "phoneNumber": "+23457997979799",
+      "email": "Johndoe21@gmail.com",
+      "course": "Software engineering",
+      "regNum": "Cmp/20/21/0129",
+      "password": "Johndoe21@gmail.com"
     },
     {
-      "id": "3037",
-      "firstname": "Samuel",
-      "lastname": "ayegbe",
-      "phoneNumber": "+234902514098",
-      "email": "holuwaconquer@gmail.com",
-      "password": "okikiola"
+      "id": "2b80",
+      "firstname": "John",
+      "lastname": "Doe",
+      "phoneNumber": "+23457997979799",
+      "email": "Johndoe21@gmail.com",
+      "course": "Software development",
+      "regNum": "Cmp/20/21/0128",
+      "password": "Johndoe21@gmail.com"
+    },
+    {
+      "id": "30b7",
+      "firstname": "Oloko",
+      "lastname": "Abdulfatai",
+      "phoneNumber": "+2349025140981",
+      "email": "olokoadesola1@gmail.com",
+      "course": "economics",
+      "regNum": "Med/21/22/2021",
+      "password": "Abdulfatai"
     }
   ],
   "Staff": []

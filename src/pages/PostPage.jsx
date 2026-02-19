@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import StudentTable from "./StudentTable";
 
 const PostPage = () => {
   const [postData, setpostData] = useState([]);
@@ -15,7 +16,7 @@ const PostPage = () => {
     axios
       .get(apiUrl)
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         setpostData(response.data);
         setIsFetching(false);
       })
@@ -31,7 +32,7 @@ const PostPage = () => {
   useEffect(() => {
     getAllPost();
   }, []);
-//   console.log(typeof postData);
+  //   console.log(typeof postData);
 
   return (
     <div className="w-full flex flex-col gap-4 !px-8">
@@ -64,7 +65,7 @@ const PostPage = () => {
         {postData.map((data, index) => (
           <div
             onClick={() =>
-              navigate(`/postdetails/${data.id}`, { state: {data} })
+              navigate(`/postdetails/${data.id}`, { state: { data } })
             }
             key={data.id}
             className=" px-3! py-2! border! w- h-40 rounded-sm bg-blue-300  shadow-md"
@@ -76,9 +77,11 @@ const PostPage = () => {
             </div>{" "}
           </div>
         ))}
-        
+      </div>{" "}
+      <div className=" my-4! ">
+        <span className="text-3xl text-blue-500 "> Students Table </span>{" "}
+        <StudentTable />{" "}
       </div>
-      {" "}
     </div>
   );
 };
