@@ -11,7 +11,7 @@
 // //     cursor: "pointer",
 // //     transition: "0.3s ease-in-out",
 // //   }
-  
+
 // //   const nameToShow = 'Conquer';
 
 // //   return (
@@ -26,7 +26,6 @@
 // // }
 
 // // export default App
-
 
 // import React from 'react'
 // import Props from './components/StudentCard'
@@ -45,7 +44,7 @@
 //       email: 'conquer@gmail.com'
 //     },
 //     {
-//       id: 2, 
+//       id: 2,
 //       avatar: 'https://images.pexels.com/photos/27523299/pexels-photo-27523299.jpeg',
 //       name: 'Jane Smith',
 //       age: 32,
@@ -53,7 +52,7 @@
 //       email: 'jane@gmail.com'
 //     },
 //     {
-//       id: 3, 
+//       id: 3,
 //       avatar: 'https://images.pexels.com/photos/32526354/pexels-photo-32526354.jpeg',
 //       name: 'Sarah Johnson',
 //       age: 28,
@@ -61,7 +60,7 @@
 //       email: 'sarah@gmail.com'
 //     },
 //     {
-//       id: 4, 
+//       id: 4,
 //       avatar: 'https://images.pexels.com/photos/27661934/pexels-photo-27661934.jpeg',
 //       name: 'Jamie Carragher',
 //       age: 28,
@@ -69,7 +68,7 @@
 //       email: 'jamie@gmail.com'
 //     },
 //     {
-//       id: 5, 
+//       id: 5,
 //       avatar: 'https://images.pexels.com/photos/27992044/pexels-photo-27992044.jpeg',
 //       name: 'Elizabeth Brown',
 //       age: 28,
@@ -88,7 +87,7 @@
 //       email: 'conquer@gmail.com'
 //     },
 //     {
-//       id: 2, 
+//       id: 2,
 //       avatar: 'https://images.pexels.com/photos/27523299/pexels-photo-27523299.jpeg',
 //       name: 'Mr Ojo',
 //       age: 32,
@@ -96,7 +95,7 @@
 //       email: 'ojo@gmail.com'
 //     },
 //     {
-//       id: 3, 
+//       id: 3,
 //       avatar: 'https://images.pexels.com/photos/32526354/pexels-photo-32526354.jpeg',
 //       name: 'Mrs Sarah Johnson',
 //       age: 28,
@@ -104,7 +103,7 @@
 //       email: 'sarah@gmail.com'
 //     },
 //     {
-//       id: 4, 
+//       id: 4,
 //       avatar: 'https://images.pexels.com/photos/27661934/pexels-photo-27661934.jpeg',
 //       name: 'Mr Williams',
 //       age: 28,
@@ -112,7 +111,7 @@
 //       email: 'jamie@gmail.com'
 //     },
 //     {
-//       id: 5, 
+//       id: 5,
 //       avatar: 'https://images.pexels.com/photos/27992044/pexels-photo-27992044.jpeg',
 //       name: 'Miss Stella',
 //       age: 28,
@@ -132,7 +131,6 @@
 
 // export default App
 
-
 // // routing
 // // react-router
 
@@ -149,11 +147,8 @@
 // import ProductPage from './pages/ProductPage'
 // import ProductDetails from './pages/ProductDetails'
 
-
-
-
 // const App = () => {
-  
+
 //   const [count, setcount] = useState(0)
 
 //   function sayHello(){
@@ -163,12 +158,12 @@
 //   useEffect(() => {
 
 //     setInterval(() => {
-      
+
 //       sayHello()
 //     }, 2000);
 
 //   }, [count])
-  
+
 //   return (
 //     <>
 //     <Samad>
@@ -190,13 +185,11 @@
 //               <Route path='/admin/dashboard'  element={<AdminDashboard />} />
 //             </Route>
 
-            
-
 //           <Route path='*' element={<h1>404 Not Found</h1>} />
 //         </Routes>
 //         <h1>{count}</h1>
 //         <button onClick={sayHello}>Count</button>
-    
+
 //     </Samad>
 
 //     </>
@@ -205,10 +198,8 @@
 
 // export default App
 
-
 // USEFFECT
 // axios
-
 
 // import axios from 'axios'
 // import React, { useEffect, useState } from 'react'
@@ -228,9 +219,8 @@
 
 //   useEffect(() => {
 //     console.log(products);
-    
+
 //   }, [products])
-  
 
 //   return (
 //     <div>App</div>
@@ -239,45 +229,47 @@
 
 // export default App
 
-// post page - list of all posts, 
-// single post page, 
-// create post page, 
-// update post page, 
+// post page - list of all posts,
+// single post page,
+// create post page,
+// update post page,
 // delete post page
 
-import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router'
-import PostPage from './pages/PostPage'
-import Navbar from './components/Navbar'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import PostdetailsPage from './pages/PostdetailsPage'
-import CreatePost from './pages/CreatePost'
-import UpdatePost from './pages/UpdatePost'
-import EditPost from './pages/EditPost'
-import Signup from './pages/Signup'
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router";
+import PostPage from "./pages/PostPage";
+import Navbar from "./components/Navbar";
+import About from "./pages/About";
+// import Contact from "./pages/Contact";
+import PostdetailsPage from "./pages/PostdetailsPage";
+import CreatePost from "./pages/CreatePost";
+import UpdatePost from "./pages/UpdatePost";
+import EditPost from "./pages/EditPost";
+import Signup from "./pages/Signup";
+import StudentTable from "./pages/StudentTable";
+import EditStudent from "./pages/EditStudent";
 
 const App = () => {
   return (
     <BrowserRouter>
-    <Navbar />
+      <Navbar />
       <Routes>
-        <Route path='/' element={<PostPage />} />
-        <Route path='/postdetails/:id' element={<PostdetailsPage />} />
-        <Route path='/create-post' element={<CreatePost />} />
-        <Route path='/edit-post/:id' element={<EditPost />} />
-        <Route path='/update-post' element={<UpdatePost />} />
+        <Route path="/" element={<PostPage />} />
+        <Route path="/postdetails/:id" element={<PostdetailsPage />} />
+        <Route path="/create-post" element={<CreatePost />} />
+        <Route path="/edit-post/:id" element={<EditPost />} />
+        <Route path="/update-post" element={<UpdatePost />} />
 
-        <Route path='/signup' element={<Signup />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/StudentTable" element={<StudentTable />} />
+        <Route path="/edit/:id" element={<EditStudent />} />
       </Routes>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default App
-
+export default App;
 
 // FORMIK - form validation, errors handling, submission
 // YUP - schema-based rule (blueprint)
 // regex - regular expression - @email.com
-
