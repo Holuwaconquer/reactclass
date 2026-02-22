@@ -249,15 +249,17 @@ import Signup from "./pages/Signup";
 import StudentTable from "./pages/StudentTable";
 import EditStudent from "./pages/EditStudent";
 import ProductPage from "./pages/ProductPage";
+import CartPage from "./pages/CartPage";
 
 const App = () => {
-
   let text = "hello world";
   let textTest = text.match(/hello/);
   console.log(textTest);
 
   const email = "myemailgmail.com";
-  const emailTest = email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/);
+  const emailTest = email.match(
+    /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+  );
   console.log("This is a valid email:", emailTest);
 
   return (
@@ -270,6 +272,7 @@ const App = () => {
         <Route path="/edit-post/:id" element={<EditPost />} />
         <Route path="/update-post" element={<UpdatePost />} />
         <Route path="/products" element={<ProductPage />} />
+        <Route path="/view-cart" element={<CartPage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/StudentTable" element={<StudentTable />} />
         <Route path="/edit/:id" element={<EditStudent />} />
@@ -284,7 +287,6 @@ export default App;
 // YUP - schema-based rule (blueprint)
 // regex - regular expression - @email.com
 // they are patterns used to match character combinations in strings in javasript?
-
 
 // global component - state
 
