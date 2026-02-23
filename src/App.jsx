@@ -250,6 +250,8 @@ import StudentTable from "./pages/StudentTable";
 import EditStudent from "./pages/EditStudent";
 import ProductPage from "./pages/ProductPage";
 import CartPage from "./pages/CartPage";
+import TodoInput from "./components/TodoInput";
+import TodoList from "./components/TodoList";
 
 const App = () => {
   let text = "hello world";
@@ -277,6 +279,9 @@ const App = () => {
         <Route path="/StudentTable" element={<StudentTable />} />
         <Route path="/edit/:id" element={<EditStudent />} />
       </Routes>
+
+      <TodoInput />
+      <TodoList />
     </>
   );
 };
@@ -293,3 +298,7 @@ export default App;
 // <global>
 //   <App></App>
 // </global>
+
+
+// Redux - state management library - global state management
+// Context API - global state management built into react

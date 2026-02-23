@@ -6,6 +6,8 @@ import { BrowserRouter } from 'react-router'
 import { GlobalContext } from './GlobalContext.jsx'
 import { CartContext } from './CartContext.jsx'
 import CartProvider from './components/CartProvider.jsx'
+import { Provider } from 'react-redux'
+import { store } from './app/store.js'
 
 const user = 'john';
 const age = 30;
@@ -15,7 +17,9 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <CartProvider>
         <GlobalContext.Provider value={ { user, age } }>
-          <App />
+          <Provider store={store}>
+            <App />
+          </Provider>
         </GlobalContext.Provider>
       </CartProvider>
     </BrowserRouter>
