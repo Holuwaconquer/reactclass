@@ -32,15 +32,22 @@ body {
     }
   }
 }
-cd 
-.stable th,
+
+.stable th, .stable
 td {
   border: 1px solid rgb(220, 77, 77);
   padding: 15px;
-  background:#1c1c1c;
-  color:white;
+  background: #1c1c1c;
+  color: white;
 }
 .stable {
   width: fit-content;
   overflow-x: scroll;
+}
+.carttable th,
+.carttable td {
+  /* border: 1px solid rgb(220, 77, 77); */
+  padding: 15px;
+  /* background: #1c1c1c;
+  color: white; */
 }

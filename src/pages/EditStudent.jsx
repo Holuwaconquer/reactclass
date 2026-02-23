@@ -31,6 +31,7 @@ const EditStudent = () => {
       ...student,
       [e.target.name]: e.target.value,
     });
+    console.log(e);
   }
 
   function handleUpdate(e) {
@@ -39,7 +40,7 @@ const EditStudent = () => {
     axios
       .put(`http://localhost:3001/Users/${id}`, student)
       .then(() => {
-        navigate("/"); // go back to table page
+        navigate("/");
       })
       .catch((err) => console.log(err));
   }
@@ -110,7 +111,12 @@ const EditStudent = () => {
             </div>
           </div>
 
-          <button type="submit" className="p-4! bg-blue-400 hover:bg-blue-700 active:bg-red-400 transition-all duration-500 rounded-md w-[50%] mx-auto!">Update</button>
+          <button
+            type="submit"
+            className="p-4! bg-blue-400 hover:bg-blue-700 active:bg-red-400 transition-all duration-500 rounded-md w-[50%] mx-auto!"
+          >
+            Update
+          </button>
         </form>
       </div>
     </div>
